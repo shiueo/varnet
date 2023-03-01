@@ -8,6 +8,7 @@
 
 #include "vulkan_createinstance.h"
 #include "vulkan_validation_layers.h"
+#include "vulkan_physical_device.h"
 
 
 #ifdef NDEBUG
@@ -31,6 +32,7 @@ private:
 	GLFWwindow* window;
 	VkInstance instance;
 	VkDebugUtilsMessengerEXT debugMessenger;
+	VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
 
 	void initWindow() {
 		glfwInit();
@@ -44,6 +46,7 @@ private:
 	void initVulkan() {
 		createInstance(instance, enableValidationLayers);
 		setupDebugMessenger(instance, debugMessenger, enableValidationLayers);
+		pickPhysicalDevice(instance, physicalDevice);
 	}
 	void mainLoop() {
 		while (!glfwWindowShouldClose(window)) {

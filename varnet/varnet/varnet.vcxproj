@@ -145,10 +145,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="vulkan_createinstance.cpp" />
+    <ClCompile Include="vulkan_physical_device.cpp" />
     <ClCompile Include="vulkan_validation_layers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vulkan_createinstance.h" />
+    <ClInclude Include="vulkan_physical_device.h" />
     <ClInclude Include="vulkan_validation_layers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
