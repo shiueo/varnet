@@ -13,10 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\vulkan_setup">
+      <UniqueIdentifier>{7e0a635e-d564-4082-a9da-0284a978d88e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="vulkan_createinstance.cpp">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClCompile>
+    <ClCompile Include="vulkan_validation_layers.cpp">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vulkan_createinstance.h">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan_validation_layers.h">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
