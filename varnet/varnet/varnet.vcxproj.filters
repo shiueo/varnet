@@ -30,6 +30,9 @@
     <ClCompile Include="vulkan_physical_device.cpp">
       <Filter>소스 파일\vulkan_setup</Filter>
     </ClCompile>
+    <ClCompile Include="vulkan_create_logical_device.cpp">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vulkan_createinstance.h">
@@ -39,6 +42,12 @@
       <Filter>소스 파일\vulkan_setup</Filter>
     </ClInclude>
     <ClInclude Include="vulkan_physical_device.h">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan_create_logical_device.h">
+      <Filter>소스 파일\vulkan_setup</Filter>
+    </ClInclude>
+    <ClInclude Include="vulkan_var.h">
       <Filter>소스 파일\vulkan_setup</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,10 +3,7 @@
 #include <vulkan/vulkan.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-
-const std::vector<const char*> validationLayers = {
-    "VK_LAYER_KHRONOS_validation"
-};
+#include "vulkan_var.h"
 
 
 VkResult CreateDebugUtilsMessengerEXT(VkInstance& instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pDebugMessenger);

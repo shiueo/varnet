@@ -5,6 +5,7 @@
 #include <iostream>
 #include <optional>
 #include <map>
+#include "vulkan_var.h"
 
 void pickPhysicalDevice(VkInstance& instance, VkPhysicalDevice& physicalDevice);
 

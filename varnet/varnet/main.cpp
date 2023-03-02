@@ -9,6 +9,7 @@
 #include "vulkan_createinstance.h"
 #include "vulkan_validation_layers.h"
 #include "vulkan_physical_device.h"
+#include "vulkan_create_logical_device.h"
 
 
 #ifdef NDEBUG
@@ -33,6 +34,8 @@ private:
 	VkInstance instance;
 	VkDebugUtilsMessengerEXT debugMessenger;
 	VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+	VkDevice device;
+	VkQueue graphicsQueue;
 
 	void initWindow() {
 		glfwInit();
@@ -47,6 +50,7 @@ private:
 		createInstance(instance, enableValidationLayers);
 		setupDebugMessenger(instance, debugMessenger, enableValidationLayers);
 		pickPhysicalDevice(instance, physicalDevice);
+		createLogicalDevice(device, physicalDevice, graphicsQueue, enableValidationLayers);
 	}
 	void mainLoop() {
 		while (!glfwWindowShouldClose(window)) {
@@ -54,6 +58,8 @@ private:
 		}
 	}
 	void cleanUp() {
+		vkDestroyDevice(device, nullptr);
+		std::cout << "vulkan_device destroyed" << std::endl;
 		if (enableValidationLayers) {
 			DestroyDebugUtilsMessengerEXT(instance, debugMessenger, nullptr);
 		}
